@@ -49,7 +49,7 @@
                     else {
                         echo "<script>alert('Mot De Passe Ou Pseudo Incorrect !')</script>";
                 
-                        echo "<script>location.href='login.php'></script>";
+                        echo "<script>location.href='login.php'</script>";
                     }
                 }
             ?>
