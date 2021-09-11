@@ -8,18 +8,21 @@
     <!-- ====================================================================== -->
     <link rel="icon" type="image/png" href="assets/images/logo/Logo Fare Natura Icon.png" />
     <!-- ====================================================================== -->
+    <!-- botstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
     <!-- ====================================================================== -->
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- ====================================================================== -->
+    <!-- all my style css here -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- ====================================================================== -->
+    <!-- style for my landing page carrousel -->
     <link rel="stylesheet" href="assets/css/slider_landing_page.css">
     <!-- ====================================================================== -->
-    <link rel="stylesheet" href="assets/css/slider-shop.css">
-    <!-- ====================================================================== -->
+    <!-- animation on scroll css -->
     <link rel="stylesheet" href="assets/css/aos.css">
     <!-- ====================================================================== -->
     <title>Fare Natura</title>
@@ -51,6 +54,7 @@
             </div>
         </nav>
     </section>
+    <!-- END-NAV     END-NAV     END-NAV     END-NAV     END-NAV     END-NAV -->
     <!-- ====================================================================== -->
 
 
@@ -65,11 +69,24 @@
         <div data-target='left' class="side-nav side-nav--left"></div>
         </div>
     </section>
+    <!-- END-LANDING    END-LANDING    END-LANDING    END-LANDING    END-LANDING -->
     <!-- ====================================================================== -->
 
 
     <!-- ====================================================================== -->
-    <!-- MINI-SECTION   MINI-SECTION   MINI-SECTION   MINI-SECTION -->
+    <!-- DARK-MODE    DARK-MODE    DARK-MODE    DARK-MODE    DARK-MODE    DARK-MODE -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+            <path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)" />
+        </svg>
+    </button>
+    <!-- END-DARK    END-DARK    END-DARK    END-DARK    END-DARK    END-DARK -->
+    <!-- ====================================================================== -->
+
+
+
+    <!-- ====================================================================== -->
+    <!-- MINI-SECTION       MINI-SECTION       MINI-SECTION       MINI-SECTION -->
     <section id="mini-section">
         <div class="infos">
             <div class="icon-style">
@@ -92,11 +109,12 @@
             </div>
         </div>
     </section>
+    <!-- END-MINI-INFOS    END-MINI-INFOS    END-MINI-INFOS    END-MINI-INFOS -->
     <!-- ====================================================================== -->
 
 
     <!-- ====================================================================== -->
-    <!-- SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM -->
+    <!-- SECTION-MUSEUM     SECTION-MUSEUM     SECTION-MUSEUM     SECTION-MUSEUM -->
     <div id="title-museum">
         <div class="title" data-aos="fade-up" data-aos-duration="2000">
             <h1>Histoire Du Musée</h1>
@@ -130,11 +148,12 @@
             </div>
         </div>
     </section>
+    <!-- END-MUSEUM    END-MUSEUM    END-MUSEUM    END-MUSEUM    END-MUSEUM -->
     <!-- ====================================================================== -->
 
 
     <!-- ====================================================================== -->
-    <!-- SECTION-EXPOSITION   SECTION-EXPOSITION   SECTION-EXPOSITION   SECTION-EXPOSITION -->
+    <!-- SECTION-EXPOSITION       SECTION-EXPOSITION       SECTION-EXPOSITION -->
     <div id="title-exposition">
         <div class="title" data-aos="fade-up" data-aos-duration="2000">
             <h1>Expositions</h1>
@@ -290,10 +309,11 @@
             </div>
         </section>
     </div>
+    <!-- END-EXPOSITION    END-EXPOSITION    END-EXPOSITION    END-EXPOSITION -->
     <!-- ====================================================================== -->
 
     <!-- ====================================================================== -->
-    <!-- SECTION-SHOP   SECTION-SHOP   SECTION-SHOP   SECTION-SHOP -->
+    <!-- SECTION-SHOP   SECTION-SHOP   SECTION-SHOP   SECTION-SHOP   SECTION-SHOP -->
     <div id="shop">
         <div class="title" data-aos="fade-up" data-aos-duration="2000">
             <h1>Boutique</h1>
@@ -307,8 +327,7 @@
 
     <!-- Displaying Products Start -->
     <div class="container">
-        <div id="message"></div>
-        <div class="row mt-2 pb-3">
+        <div class="row mt-2 pb-3" id="show_data_shop">
             <?php
             require_once 'classes/Database.class.php';
 
@@ -320,8 +339,8 @@
                     <div class="card-deck">
                         <div class="card p-2 border-secondary mb-2">
                             <div class="card-body p-1">
-                                <h4 class="card-title text-center text-info"><?= $row['name_product'] ?></h4>
-                                <h4 class="card-title text-center text-dark"><?= $row['description_product'] ?></h4>
+                                <h4 class="card-title text-center"><?= $row['name_product'] ?></h4>
+                                <p class="card-title text-center"><?= $row['description_product'] ?></p>
 
                             </div>
                             <div class="card-footer p-1">
@@ -334,11 +353,13 @@
         </div>
     </div>
     <!-- Displaying Products End -->
+    <!-- END-SHOP    END-SHOP    END-SHOP    END-SHOP    END-SHOP    END-SHOP -->
+    <!-- ====================================================================== -->
 
 
 
     <!-- ====================================================================== -->
-    <!-- SECTION-HORAIRES-TARIFS   SECTION-HORAIRES6T -TARIFS   SECTION-HORAIRES6T-TARIFS   SECTION-HORAIRES6-TARIFS -->
+    <!-- SECTION-INFO   SECTION-INFO   SECTION-INFO  SECTION-INFO  SECTION-INFO -->
     <section id="map-infos">
         <div class="map">
             <iframe class="map-size" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.768942306622!2d-149.85267918590895!3d-17.518539872378135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x769989ab04b0f90b%3A0xcd0bf5ccd79e5f07!2sTe%20Fare%20Natura%20-%20L&#39;%C3%A9comus%C3%A9e!5e0!3m2!1sfr!2sfr!4v1628128698160!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -355,26 +376,27 @@
             <div class="price">
                 <h3>Nos tarifs</h3>
                 <u>
-                    <p>visiteur internationaux</p>
+                    <p>Visiteur internationaux</p>
                 </u>
                 <p>2100 XPF</p> <br>
                 <u>
-                    <p>visiteur nationalité française</p>
+                    <p>Visiteur nationalité française</p>
                 </u>
                 <p>1600 XPF</p> <br>
                 <u>
-                    <p>jeunes (plus de 10 ans / moins de 18 ans) et étudiants (sur présentation d'un justificatif)</p>
+                    <p>Jeunes (plus de 10 ans / moins de 18 ans) et étudiants (sur présentation d'un justificatif)</p>
                 </u>
                 <p>400 XPF</p> <br>
                 <p>Gratuité pour les enfants de moins de 10 ans</p>
             </div>
         </div>
     </section>
+    <!-- END-MAP-INFO   END-MAP-INFO   END-MAP-INFO   END-MAP-INFO   END-MAP-INFO -->
     <!-- ====================================================================== -->
 
 
     <!-- ====================================================================== -->
-    <!-- SECTION-FOOTER   SECTION-FOOTER   SECTION-FOOTER   SECTION-FOOTER -->
+    <!-- SECTION-FOOTER     SECTION-FOOTER     SECTION-FOOTER     SECTION-FOOTER -->
     <!-- Footer -->
     <footer id="footer" class="text-center text-lg-start text-muted">
         <!-- Section: Social media -->
@@ -481,28 +503,19 @@
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(36, 35, 35, 0.274);">
             © 2021 Copyright :
-            <a class="text-reset fw-bold" href="admin/crud.php">Fare Natura</a>
+            <a class="text-reset fw-bold" href="admin/crud.php">Solar</a>
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <!-- END-FOOTER    END-FOOTER    END-FOOTER    END-FOOTER    END-FOOTER -->
     <!-- ====================================================================== -->
 
 
-    <!-- ====================================================================== -->
-    <script src='assets/js/jquery.min.js'></script>
-    <script src="assets/js/JQuery3.3.1.js"></script>
-    <!-- ====================================================================== -->
-    <script src="assets/js/bootstrap/bootstrap.bundle.js"></script>
-    <!-- ====================================================================== -->
 
-    <script src="assets/js/vue-counter.js"></script>
     <!-- ====================================================================== -->
-    <!-- api animation on scroll -->
-    <script src="assets/js/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <!-- jquery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- ====================================================================== -->
     <!-- all the others js -->
     <script src="assets/js/natura_script.js"></script>
@@ -510,8 +523,19 @@
     <!-- slider for section exposition -->
     <script src="assets/js/slider-expo.js"></script>
     <!-- ====================================================================== -->
+    <!-- dark mode js -->
+    <script src="assets/js/darkMode.js"></script>
+    <!-- ====================================================================== -->
     <!-- button to scroll on the top -->
     <script src="assets/js/btnTop.js"></script>
+    <!-- ====================================================================== -->
+    <script src="assets/js/vue-counter.js"></script>
+    <!-- ====================================================================== -->
+    <!-- api animation on scroll -->
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- ====================================================================== -->
 
 </body>

@@ -1,3 +1,6 @@
+/* ========================================================================
+FONT-INPORT     FONT-INPORT     FONT-INPORT     FONT-INPORT     FONT-INPORT
+======================================================================== */
 @font-face {
   font-family: league-spartan;
   src: url(../fonts/league-spartan/LeagueSpartan-Bold.otf);
@@ -12,30 +15,38 @@
   font-family: roboto-bold;
   src: url(../fonts/roboto/Roboto-Bold.ttf);
 }
+/* ========================================================================
+END-IMPORT      END-IMPORT      END-IMPORT      END-IMPORT      END-IMPORT
+======================================================================== */
 
-h1, h2, h3, h4, h5 {
-  font-family: league-spartan;
+
+
+/* ========================================================================
+ALL-PREDEFINED-STYLE       ALL-PREDEFINED-STYLE       ALL-PREDEFINED-STYLE
+======================================================================== */
+:root {
+  --clr-light: #D4ECDD;
+  --clr-dark: #112031;
+  --clr-primary: #112031;
+  --clr-secondary: #112031;
+  --clr-third: #D4ECDD;
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+
+  --ff-title: "Playfair Display", serif;
+  --ff-body: "Assistant", sans-serif;
 }
 
-h6 {
-  font-family: roboto-bold;
-}
+.darkmode {
+  --clr-light: #D4ECDD;
+  --clr-dark: #112031;
+  --clr-primary: #D4ECDD;
+  --clr-secondary: #D4ECDD;
+  --clr-third: #112031;
 
-p {
-  font-family: roboto-mini;
-}
-
-.shop-box p {
-  font-family: league-spartan;
-}
-
-body {
-  overflow-x: hidden;
-  background: ghostwhite;
-}
-
-html {
-  overflow-x: hidden;
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
 }
 
 * {
@@ -43,8 +54,59 @@ html {
   margin: 0;
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: league-spartan;
+  color: var(--clr-primary);
+}
+
+p {
+  font-family: roboto-mini;
+  color: var(--clr-primary);
+}
 /* ========================================================================
-SECTION-NAV   SECTION-NAV   SECTION-NAV   SECTION-NAV   SECTION-NAV
+END-PREDEFINED-STYLE       END-PREDEFINED-STYLE       END-PREDEFINED-STYLE
+======================================================================== */
+
+
+
+/* ========================================================================
+DARK-BUTTON     DARK-BUTTON     DARK-BUTTON     DARK-BUTTON     DARK-BUTTON
+======================================================================== */
+.dark-mode-toggle {
+  position: relative;
+  display: flex;
+  float: right;
+  margin: 1%;
+  z-index: 100;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+/* ========================================================================
+END-DARK     END-DARK     END-DARK     END-DARK     END-DARK    END-DARK
+======================================================================== */
+
+
+
+/* ========================================================================
+SECTION-NAV     SECTION-NAV     SECTION-NAV     SECTION-NAV     SECTION-NAV
 ======================================================================== */
 .menu_nav {
     position: fixed;
@@ -185,6 +247,9 @@ a:focus {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+/* ========================================================================
+END-NAV    END-NAV    END-NAV    END-NAV    END-NAV    END-NAV    END-NAV
+======================================================================== */
 
 
 
@@ -192,7 +257,7 @@ a:focus {
 SECTION-INFO   SECTION-INFO   SECTION-INFO   SECTION-INFO   SECTION-INFO
 ======================================================================== */
 #mini-section {
-  background: ghostwhite;
+  background: var(--background);
   min-height: 50vh;
   width: 100%;
   display: flex;
@@ -240,7 +305,7 @@ SECTION-INFO   SECTION-INFO   SECTION-INFO   SECTION-INFO   SECTION-INFO
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background: #263677;
+  background: var(--clr-primary);
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
@@ -252,7 +317,7 @@ i {
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  color: aliceblue;
+  color: var(--background);
 }
 
 @media screen and (max-width: 800px) {
@@ -293,17 +358,21 @@ i {
     font-size: 15px;
   }
 }
+/* ========================================================================
+END-INFO   END-INFO   END-INFO   END-INFO   END-INFO   END-INFO   END-INFO
+======================================================================== */
+
 
 
 /* ========================================================================
-SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
+SECTION-MUSEUM     SECTION-MUSEUM     SECTION-MUSEUM     SECTION-MUSEUM
 ======================================================================== */
 /* TITLE   TITLE   TITLE */
 #title-museum {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: ghostwhite;
+  background: var(--background);
   padding: 2%;
 }
 
@@ -325,14 +394,14 @@ SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
 .line1 {
   width: 15%;
   margin-right: 3%;
-  color: #263677;
+  color: var(--clr-primary);
   box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
 }
 
 .line2 {
   width: 15%;
   margin-left: 3%;
-  color: #263677;
+  color: var(--clr-primary);
   box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
 }
 
@@ -400,7 +469,7 @@ SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
     margin-bottom: 0px !important;
   }
 }
-/* RESPONSIVE   RESPONSIVE   RESPONSIVE */
+/* END-RESPONSIVE   END-RESPONSIVE   END-RESPONSIVE */
 
 .museum {
   display: flex;
@@ -411,7 +480,7 @@ SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
   width: 100%;
   height: 80vh;
   padding: 2%;
-  background: ghostwhite;
+  background: var(--background);
 }
 
 .myCard {
@@ -419,7 +488,7 @@ SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
   height: 100%;
   display: flex;
   box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
-  background: ghostwhite;
+  background: var(--background);
 }
 
 .myCard-images {
@@ -483,13 +552,18 @@ SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM   SECTION-MUSEUM
   margin-bottom: 2.5vmin;
   height: 80%;
 }
+/* ========================================================================
+END-MUSEUM      END-MUSEUM      END-MUSEUM      END-MUSEUM      END-MUSEUM
+======================================================================== */
+
+
 
 /* ========================================================================
-SECTION-EXPO   SECTION-EXPO   SECTION-EXPO   SECTION-EXPO   SECTION-EXPO
+SECTION-EXPO         SECTION-EXPO         SECTION-EXPO         SECTION-EXPO
 ======================================================================== */
 /* TITLE   TITLE   TITLE */
 #title-exposition {
-  background: ghostwhite;
+  background: var(--background);
   padding: 2%;
 }
 
@@ -522,7 +596,7 @@ SECTION-EXPO   SECTION-EXPO   SECTION-EXPO   SECTION-EXPO   SECTION-EXPO
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  background: ghostwhite;
+  background: var(--background);
 }
 
 .section-expo {
@@ -598,10 +672,30 @@ transform: scale(1.5);
     height: 100%;
   }
 }
+/* ========================================================================
+END-EXPO     END-EXPO     END-EXPO     END-EXPO     END-EXPO     END-EXPO
+======================================================================== */
+
 
 
 /* ========================================================================
-SECTION-MAP   SECTION-MAP   SECTION-MAP   SECTION-MAP   SECTION-MAP
+SECTION-SHOP         SECTION-SHOP         SECTION-SHOP         SECTION-SHOP
+======================================================================== */
+.card {
+  background: var(--clr-secondary);
+}
+
+.card-title {
+  color: var(--clr-third);
+}
+/* ========================================================================
+END-SHOP     END-SHOP     END-SHOP     END-SHOP     END-SHOP     END-SHOP
+======================================================================== */
+
+
+
+/* ========================================================================
+SECTION-MAP     SECTION-MAP     SECTION-MAP     SECTION-MAP     SECTION-MAP
 ======================================================================== */
 #map-infos {
   display: flex;
@@ -685,6 +779,10 @@ SECTION-MAP   SECTION-MAP   SECTION-MAP   SECTION-MAP   SECTION-MAP
     font-size: 13.5px;
   }
 }
+/* ========================================================================
+END-MAP    END-MAP    END-MAP    END-MAP    END-MAP    END-MAP    END-MAP
+======================================================================== */
+
 
 
 /* ========================================================================
@@ -799,3 +897,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
+/* ========================================================================
+END-FOOT     END-FOOT     END-FOOT     END-FOOT     END-FOOT     END-FOOT
+======================================================================== */

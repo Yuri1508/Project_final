@@ -28,15 +28,6 @@ class Database
 			return true;
 		}
 
-		public function insertImage($image)
-        {
-			$sql = "INSERT INTO `tab_shop`(`image_product`) VALUES  (:image)";
-
-			$stmt = $this->connect->prepare($sql);
-			$stmt->execute(['image'=>$image]);
-
-			return true;
-		}
 
 		public function getData()
         {

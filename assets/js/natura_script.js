@@ -34,6 +34,7 @@ menuSlide();
 
 
 
+
 // ======================================================================
 // LANDING   LANDING   LANDING   LANDING   LANDING   LANDING   LANDING
 // ======================================================================
@@ -210,14 +211,6 @@ $(document).ready(function () {
 		if (e.which === 39) navigateRight();
 		if (e.which === 37) navigateLeft();
 	});
-
-	// $(document).on('mousewheel DOMMouseScroll', function (e) {
-	// 	if (animation) return;
-	// 	var delta = e.originalEvent.wheelDelta;
-
-	// 	if (delta > 0 || e.originalEvent.detail < 0) navigateLeft();
-	// 	if (delta < 0 || e.originalEvent.detail > 0) navigateRight();
-	// });
 });
 
 
@@ -237,7 +230,7 @@ var swiper = new Swiper('.swiper-container', {
 
 
 // ======================================================================
-// Add active class to the current button (highlight it)
+// Add active class to the current button of exposition
 var header = document.getElementById("my-active");
 var btns = header.getElementsByClassName("go");
 for (var i = 0; i < btns.length; i++) {
@@ -247,26 +240,4 @@ for (var i = 0; i < btns.length; i++) {
 		this.className += " active";
 	});
 }
-// ======================================================================
-
-// ======================================================================
-// button return up
-$('<div></div>')
-    .attr('id', 'scrolltotop')
-    .hide()
-    .css({ 'z-index': '1000', 'position': 'fixed', 'bottom': '25px', 'right': '35px', 'cursor': 'pointer', 'width': '40px', 'height': '40px', 'background': '#263677', 'border-radius': '50%' })
-    .appendTo('body')
-    .click(function () {
-        $('html,body').animate({ scrollTop: 0 }, '3000');
-    });
-$('<div></div>')
-    .css({ 'width': '6px', 'height': '6px', 'transform': 'rotate(-135deg)', 'border': 'solid ghostwhite', 'border-width': '0 3px 3px 0', 'padding': '3px', 'margin-top': '16px', 'margin-left': '15px' })
-    .appendTo('#scrolltotop');
-$(window).scroll(function () {
-    if ($(window).scrollTop() < 500) {
-        $('#scrolltotop').fadeOut();
-    } else {
-        $('#scrolltotop').fadeIn();
-    }
-});
 // ======================================================================
