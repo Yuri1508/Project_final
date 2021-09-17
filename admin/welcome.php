@@ -22,8 +22,8 @@
 		<div class="login-email">
 
             <?php
-                $uname = "admini";
-                $pwd = "admini";
+                $uname = "Solar";
+                $pwd = "..Solar123..";
 
                 session_start();
 

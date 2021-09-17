@@ -122,8 +122,8 @@ if (isset($_POST['info_id'])) {
 }
 
 if (isset($_GET['export']) && $_GET['export'] == "excel") {
-    header("Content-Type: application/xml");
-    header("Content-Disposition: attachement; filename=user.xml");
+    header("Content-Type: application/xls");
+    header("Content-Disposition: attachement; filename=user.xls");
     header("Pragma: no-cache");
     header("Expires: 0");
 
